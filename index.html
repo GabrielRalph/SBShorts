@@ -53,7 +53,7 @@
 
     let drawing = false;
     async function drawLoveHeart(){
-      console.log('xxx');
+      // console.log('xxx');
       if (drawing) return;
       drawing = true;
       let love = document.createElement("div");
@@ -68,8 +68,8 @@
         let [xd2, yd2] = loveheart(theta * 2, scale);
         love.innerHTML = `<svg viewBox = "-50 -50 100 100">
           <path d = "${path}"></path>
-          <circle fill = "red" cx = "${xd}" cy = "${yd}" r = "${scale * 1.5}"></circle>
-          <circle fill = "white" cx = "${xd2}" cy = "${yd2}" r = "${scale * 1.5}"></circle>
+          <circle fill = "red" cx = "${xd}" cy = "${yd}" r = "${scale * 0.8}"></circle>
+          <circle fill = "white" cx = "${xd2}" cy = "${yd2}" r = "${scale * 0.8}"></circle>
           <g font-size = "5" transform = "scale(${scale/3})" >
             <text text-anchor = "middle">Coming
             </text>
@@ -158,8 +158,9 @@
       gap: 2em;
       margin: 1em;
     }
-    video, img, svg {
-      width: 100%;
+    img {
+      width: calc(100% - 4em);
+      margin: 2em;
     }
 
     #video {

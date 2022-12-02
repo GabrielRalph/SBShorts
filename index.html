@@ -65,7 +65,7 @@
         let scale = 2.5 * (0.5 - cos(theta) * 0.5);
         let path = loveheartPath(scale);
         let [xd, yd] = loveheart(theta * 1, scale);
-        let [xd2, yd2] = loveheart(theta * 2, scale);
+        let [xd2, yd2] = loveheart(-theta * 1.5, scale);
         love.innerHTML = `<svg viewBox = "-50 -50 100 100">
           <path d = "${path}"></path>
           <circle fill = "red" cx = "${xd}" cy = "${yd}" r = "${scale * 0.8}"></circle>
